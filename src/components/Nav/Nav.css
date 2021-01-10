@@ -3,8 +3,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     position: absolute;
+    padding-top: 10px;
     top: 0;
-    padding: 10px 0px;
     width: 100%;
+}
 
+@media only screen and (max-width: 500px) {
+    .nav-container {
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
 }

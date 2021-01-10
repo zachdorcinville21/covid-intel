@@ -15,6 +15,8 @@ const Nav = ({ isStatsPage }: NavProps) => {
         color: isStatsPage ? "#000000" : "#FAEBD7",
         fontFamily: theme.font,
     }
+
+
     return (
         <div className="nav-container">
             <Link style={linkStyle} to="/">Stats</Link>

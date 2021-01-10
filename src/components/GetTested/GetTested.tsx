@@ -80,7 +80,7 @@ const GetTested = () => {
             height: "100vh",
             display: "flex",
             justifyContent: "center",
-            overflowY: "scroll"
+            overflowY: "scroll",
         }}>
             <Nav isStatsPage={false}/>
             <div className="gt-innerContainer">

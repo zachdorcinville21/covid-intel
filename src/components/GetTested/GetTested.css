@@ -36,5 +36,9 @@
     #city-input {
         margin-left: 0;
     }
+
+    .gt-innerContainer {
+        width: 100%;
+    }
 }
 
