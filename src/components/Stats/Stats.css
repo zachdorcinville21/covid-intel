@@ -1,0 +1,25 @@
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.cases {
+    display: flex;
+    flex-direction: column;
+}
+
+#deaths-txt {
+    color: #B22222;
+}
+
+#recovered-txt {
+    color: #228B22;
+}
+
+@media only screen and (max-width: 520px) {
+    .stats {
+        flex-direction: column;
+    }
+}

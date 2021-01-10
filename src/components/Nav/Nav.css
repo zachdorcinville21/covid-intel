@@ -1,0 +1,10 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    padding: 10px 0px;
+    width: 100%;
+
+}

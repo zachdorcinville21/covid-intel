@@ -1,0 +1,40 @@
+.gt-innerContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    gap: 100px;
+}
+
+.test-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#gtheading-txt {
+    color: #FAEBD7;
+}
+
+.gt-locationSelect {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .gt-locationSelect {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #city-input {
+        margin-left: 0;
+    }
+}
+
