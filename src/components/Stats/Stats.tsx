@@ -8,6 +8,7 @@ import './Stats.css';
 import Nav from '../Nav/Nav';
 
 const API_URL = "https://api.covidtracking.com";
+const WINDOW_WIDTH = window.screen.width;
 
 const Stats = () => {
     const [stats, setStats] = useState<any>({});
@@ -32,10 +33,20 @@ const Stats = () => {
         }
     }
 
+    const getHeight = (): string => {
+        let height: string = "";
+        if (WINDOW_WIDTH <= 520 && statsNotEmpty) {
+            height =  "auto";
+        } else if (WINDOW_WIDTH <= 520 && statsNotEmpty===false) {
+            height =  "100vh";
+        }
+        return height;
+    }
+
     return (
         <div className="stats-container" style={{
             width: "100%",
-            height: (window.screen.width <= 520 && statsNotEmpty) ? "100%" : "100vh",
+            height: getHeight(),
             backgroundColor: theme.statsBackground,
             display: "flex", 
             justifyContent: "center",
@@ -49,7 +60,7 @@ const Stats = () => {
                 gap: "100px",
                 alignItems: "center",
                 justifyContent: "center",
-                paddingBottom: "50px",
+                paddingBottom: "100px",
             }}>
                 <div className="stats-heading">
                     <h1 style={{ fontFamily: theme.font, color: "#fffafa", marginBottom: "5px", }}>COVID-19 stats for: {selectedState}</h1>
