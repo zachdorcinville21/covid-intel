@@ -36,9 +36,11 @@ const Stats = () => {
     const getHeight = (): string => {
         let height: string = "";
         if (WINDOW_WIDTH <= 520 && statsNotEmpty) {
-            height =  "auto";
-        } else if (WINDOW_WIDTH <= 520 && statsNotEmpty===false) {
-            height =  "100vh";
+            height = "auto";
+        } else if (WINDOW_WIDTH <= 520 && statsNotEmpty === false) {
+            height = "100vh";
+        } else {
+            height = "100vh";
         }
         return height;
     }
@@ -48,11 +50,11 @@ const Stats = () => {
             width: "100%",
             height: getHeight(),
             backgroundColor: theme.statsBackground,
-            display: "flex", 
+            display: "flex",
             justifyContent: "center",
             alignItems: "center",
         }}>
-            <Nav isStatsPage/>
+            <Nav isStatsPage />
             <div className="stats-innerContainer" style={{
                 width: "50%",
                 display: "flex",
