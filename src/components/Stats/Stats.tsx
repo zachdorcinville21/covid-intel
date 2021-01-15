@@ -35,7 +35,7 @@ const Stats = () => {
     return (
         <div className="stats-container" style={{
             width: "100%",
-            height: "100vh",
+            height: (window.screen.width <= 520 && statsNotEmpty) ? "100%" : "100vh",
             backgroundColor: theme.statsBackground,
             display: "flex", 
             justifyContent: "center",
@@ -48,31 +48,33 @@ const Stats = () => {
                 flexDirection: "column",
                 gap: "100px",
                 alignItems: "center",
+                justifyContent: "center",
+                paddingBottom: "50px",
             }}>
                 <div className="stats-heading">
-                    <h1 style={{ fontFamily: theme.font }}>COVID-19 stats for: {selectedState}</h1>
-                    {statsNotEmpty && <small style={{ fontFamily: theme.font }}>Last updated: {stats.lastUpdateEt.slice(0, 9)}</small>}
+                    <h1 style={{ fontFamily: theme.font, color: "#fffafa", marginBottom: "5px", }}>COVID-19 stats for: {selectedState}</h1>
+                    {statsNotEmpty && <small style={{ fontFamily: theme.font, color: "#F0E68C" }}>Last updated: {stats.lastUpdateEt.slice(0, 9)}</small>}
                 </div>
                 <div className="state-select">
-                    <StateSelect name="states" id="states" onChange={onStateSelect} autoFocus>
+                    <StateSelect name="states" id="states" onChange={onStateSelect}>
                         {stateOptions}
                     </StateSelect>
                 </div>
                 <div className="stats">
                     <div className="cases">
-                        <h2 style={{ fontFamily: theme.font }}>cases:</h2>
-                        <h2 style={{ fontFamily: theme.font }} id="cases-txt">{statsNotEmpty && stats.positive && stats.positive.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
-                        <BeatLoader color="#20B2AA" loading={loading} size={15} />
+                        <h2 style={{ fontFamily: theme.font, color: "#fffafa" }}>cases:</h2>
+                        <h2 style={{ fontFamily: theme.font, color: "#fffafa" }} id="cases-txt">{statsNotEmpty && stats.positive && stats.positive.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
+                        <BeatLoader color="#4169E1" loading={loading} size={15} />
                     </div>
                     <div className="deaths">
-                        <h2 style={{ fontFamily: theme.font }}>deaths:</h2>
+                        <h2 style={{ fontFamily: theme.font, color: "#fffafa" }}>deaths:</h2>
                         <h2 style={{ fontFamily: theme.font }} id="deaths-txt">{statsNotEmpty && stats.death && stats.death.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
-                        <BeatLoader color="#20B2AA" loading={loading} size={15} />
+                        <BeatLoader color="#4169E1" loading={loading} size={15} />
                     </div>
                     <div className="recovered">
-                        <h2 style={{ fontFamily: theme.font }}>recovered:</h2>
+                        <h2 style={{ fontFamily: theme.font, color: "#fffafa" }}>recovered:</h2>
                         <h2 style={{ fontFamily: theme.font }} id="recovered-txt">{statsNotEmpty && stats.recovered && stats.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
-                        <BeatLoader color="#20B2AA" loading={loading} size={15} />
+                        <BeatLoader color="#4169E1" loading={loading} size={15} />
                     </div>
                 </div>
             </div>

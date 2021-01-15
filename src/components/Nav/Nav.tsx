@@ -11,8 +11,8 @@ interface NavProps {
 const Nav = ({ isStatsPage }: NavProps) => {
     const theme = useContext(ThemeContext);
     const linkStyle = {
-        textDecoration: "none", 
-        color: isStatsPage ? "#000000" : "#FAEBD7",
+        textDecoration: "none",
+        color: "#fffafa",
         fontFamily: theme.font,
     }
 

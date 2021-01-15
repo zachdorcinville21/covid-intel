@@ -20,7 +20,6 @@ const styles = makeStyles({
         padding: '25px 15px',
         backgroundColor: "transparent",
         color: "#FAEBD7",
-        marginBottom: "20px",
     },
 
     pag: {
@@ -34,7 +33,7 @@ const GetTested = () => {
     const [customLocations, setCustoms] = useState<TestingLocation[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [currentPage, setPage] = useState<number>(0);
-    const locationsNotEmpty = Object.keys(locations).length > 0;
+    const locationsNotEmpty: boolean = Object.keys(locations).length > 0;
     const theme = useContext(ThemeContext);
     const offset = 5*currentPage;
 
@@ -77,18 +76,18 @@ const GetTested = () => {
         <div className="gt-container" style={{
             backgroundColor: theme.testedBackground,
             width: "100%",
-            height: "100vh",
+            height: locationsNotEmpty ? "auto" : "100vh",
             display: "flex",
             justifyContent: "center",
-            overflowY: "scroll",
+            alignItems: "center",
         }}>
             <Nav isStatsPage={false}/>
             <div className="gt-innerContainer">
                 <div className="gt-heading">
-                    <h1 style={{ fontFamily: theme.font, fontWeight: 700 }} id="gtheading-txt"><img alt="medical" src={medicineIcon} style={{ width: "40px", height: "40px", position: "relative", top: "8px" }} /> View COVID-19 Testing Locations</h1>
+                    <h1 style={{ fontFamily: theme.font, fontWeight: 700 }} id="gtheading-txt"><img alt="medical" src={medicineIcon} style={{ width: "40px", height: "40px", }} /> View COVID-19 Testing Locations</h1>
                 </div>
                 <div className="gt-locationSelect">
-                    <StateSelect name="state-select" onChange={onStateSelect} autoFocus>
+                    <StateSelect name="state-select" onChange={onStateSelect}>
                         {stateOptions}
                     </StateSelect>
                     <CityInput id="city-input" placeholder="Enter city/county" onChange={onCityChange} />

@@ -11,7 +11,7 @@ interface Theme {
 }
 
 const themeDefault: Theme = {
-    statsBackground: "#FFF8DC",
+    statsBackground: "#7B829D",
     testedBackground: "#6495ED",
     font: "Nunito",
 }
