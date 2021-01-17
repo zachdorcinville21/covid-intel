@@ -102,7 +102,6 @@ const GetTested = () => {
                         key={idx}
                     />
                 ))}
-                {/* <RingLoader color={"red"} loading={loading} size={50} /> */}
             </div>
             <div style={{ 
                 display: "flex",
