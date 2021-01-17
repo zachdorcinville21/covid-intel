@@ -72,6 +72,9 @@
         margin-bottom: 50px;
     }
 
-    
+    .gt-heading {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 }
 
