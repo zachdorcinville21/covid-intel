@@ -1,31 +1,7 @@
-
-.stats {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-}
-
-.cases {
-    display: flex;
-    flex-direction: column;
-}
-
-#deaths-txt {
-    color: crimson;
-}
-
-#recovered-txt {
-    color: #32CD32;
-}
-
-@media only screen and (max-width: 520px) {
-    .stats {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-    }
-
-    .stats-innerContainer {
-        padding-top: 100px;
+@media (max-width: 520px) {
+    .stats-heading {
+        position: relative;
+        top: 60px;
+        padding: 0px 10px;
     }
 }

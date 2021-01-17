@@ -5,14 +5,14 @@ interface ThemeProviderProps {
 }
 
 interface Theme {
-    statsBackground: string, 
+    statsBackground: string,
     testedBackground: string,
     font: string,
 }
 
 const themeDefault: Theme = {
-    statsBackground: "#7B829D",
-    testedBackground: "#6495ED",
+    statsBackground: "linear-gradient( 135deg, #97ABFF 10%, #123597 100%)",
+    testedBackground: "linear-gradient(315deg, #06bcfb 0%, #4884ee 74%)",
     font: "Nunito",
 }
 
