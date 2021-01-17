@@ -4,4 +4,8 @@
         top: 60px;
         padding: 0px 10px;
     }
+    .state-select, .stats-heading {
+        margin-bottom: 50px !important;
+    }
 }
+

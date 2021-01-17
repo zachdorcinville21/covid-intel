@@ -67,4 +67,9 @@
     }
 }
 
+@media (max-width: 520px) {
+    .gt-heading, .gt-locationSelect {
+        margin-bottom: 50px;
+    }
+}
 
