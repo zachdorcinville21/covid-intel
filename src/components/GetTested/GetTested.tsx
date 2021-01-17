@@ -88,7 +88,7 @@ const GetTested = () => {
                     <h1 style={{ fontFamily: theme.font, fontWeight: 700 }} id="gtheading-txt"><img alt="medical" src={medicineIcon} style={{ width: "40px", height: "40px", }} /> View COVID-19 Testing Locations</h1>
                 </div>
                 <div className="gt-locationSelect">
-                    <StateSelectGT name="state-select" onChange={onStateSelect}>
+                    <StateSelectGT id='state-selectGT' name="state-select" onChange={onStateSelect}>
                         {stateOptions}
                     </StateSelectGT>
                     <CityInput id="city-input" placeholder="Enter city/county" onChange={onCityChange} />

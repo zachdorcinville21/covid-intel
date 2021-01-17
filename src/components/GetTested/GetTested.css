@@ -68,8 +68,10 @@
 }
 
 @media (max-width: 520px) {
-    .gt-heading, .gt-locationSelect {
+    .gt-heading, .gt-locationSelect, .state-selectGT {
         margin-bottom: 50px;
     }
+
+    
 }
 
