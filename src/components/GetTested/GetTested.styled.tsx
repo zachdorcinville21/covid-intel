@@ -31,6 +31,7 @@ export const StateSelectGT = styled.select`
 
     @media (max-width: 520px) {
         font-size: 16px;
+        margin-bottom: 10px;
     }
 `;
 
