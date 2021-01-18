@@ -6,5 +6,9 @@
     .state-select, .stats-heading {
         margin-bottom: 70px !important;
     }
+
 }
 
+.state-select {
+    outline: none;
+}
