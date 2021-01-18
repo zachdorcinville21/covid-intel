@@ -9,6 +9,10 @@ export const CityInput = styled.input`
     padding: 6px 10px;
     transition: ease 0.2;
     font-family: Nunito;
+
+    @media (max-width: 520px) {
+        font-size: 16px;
+    }
 `;
 
 export const StateSelectGT = styled.select`
@@ -23,6 +27,10 @@ export const StateSelectGT = styled.select`
     &:focus {
         outline: none;
         box-shadow: 0px 0px 10px #000000;
+    }
+
+    @media (max-width: 520px) {
+        font-size: 16px;
     }
 `;
 

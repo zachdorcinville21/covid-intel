@@ -23,6 +23,7 @@ export const StateSelect = styled.select`
     @media (max-width: 520px) {
         position: relative;
         top: 25px;
+        font-size: 16px;
     }
 `;
 
